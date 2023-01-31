@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js" defer></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section>
+        <div class="flex justify-between items-center w-2/3 mx-auto mt-20">
+            <h3 class="text-3xl">Users</h3>
+            <button 
+                id="modalBtn" class="px-5 py-1.5 bg-indigo-500 hover:bg-indigo-700 text-white font-bold  border border-indigo-500 rounded">CREATE
+                USER</button>
+        </div>
+
+        <table class="w-3/4 border-collapse block md:table mt-3 mx-auto">
+            <thead class="block md:table-header-group">
+                <tr
+                    class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
+                    <th
+                        class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                        Name</th>
+                    <th
+                        class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                        Age</th>
+                    <th
+                        class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                        Job</th>
+                    <th
+                        class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                        Salary</th>
+                    <th
+                        class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                        Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody" class="block md:table-row-group">
+
+            </tbody>
+        </table>
+
+        <div id="loading" class="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-[#0000006c]">
+            <img class="bg-black" src="./images/loading 1.svg" alt="loading...">
+        </div>
+    </section>
+   
+    <section>
+        <div id="modal"
+        class="hidden w-screen h-screen backdrop-blur-[5px] fixed z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <form id="form"
+            class="w-1/2 border-2 border-black flex flex-col  justify-between p-10 rounded-xl bg-white fixed z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <label>
+                name
+                <input type="text" id="name" name="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    "
+                    required> </label>
+            <label>
+                age
+                <input type="number" id="age" name="age"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    "
+                    required> </label>
+            <label>
+                job
+                <input type="text" id="job" name="job"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    "
+                    required> </label>
+            <label>
+                salary
+                <input type="number" id="salary" name="salary"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5    "
+                    required> </label>
+
+            <div class="flex justify-between mt-4">
+                <button id="btnClose" type="reset" class="border border-gray-400 rounded-lg p-2.5 px-5">cancel</button>
+                <button   name="btn" type="submit" class="bg-sky-600 text-white rounded-lg p-2.5 px-5 disabled:opacity-50  disabled:cursor-not-allowed">submit</button>
+            </div>
+        </form>
+    </div>
+    </section>
+</body>
+
+</html>
